@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SocialSidebar from './components/SocialSidebar';
+import Spotlight from './components/Spotlight';
+import Hero from './components/Hero';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-dark-navy text-lightest-slate min-h-screen relative">
+      <Spotlight />
+      <SocialSidebar />
+      <Hero />
+      <Experience />
+      <Projects />
+      <Contact />
+      
+      {/* Footer */}
+      <footer className="py-8 px-6 md:px-12 lg:px-20 lg:ml-80 border-t border-light-gray border-opacity-20">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-slate text-sm font-mono">
+            Nathan Skoczkowski 2025
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
